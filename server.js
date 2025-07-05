@@ -13,7 +13,7 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 const app = express()
 app.use(express.static('public'));
 app.use(cors({
-	origin : ["https://logist-q-client.vercel.app/login"],
+	origin : ["https://logist-q-client.vercel.app/"],
 	methods : ["GET","POST","PUT","DELETE"],
 	credentials : true
 }))
