@@ -12,7 +12,11 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 
 const app = express()
 app.use(express.static('public'));
-app.use(cors())
+app.use(cors({
+	origin : ["https://logist-q-client.vercel.app/login"],
+	methods : ["GET","POST","PUT","DELETE"],
+	credentials : true
+}))
 app.use(express.json());
 
 app.use("/api/dashboard", dashboardRouter);
